@@ -54,3 +54,35 @@ erDiagram
 
     Participants ||--o{ Product_Participants : "has product payment"
     Products ||--o{ Product_Participants : "has participant"
+graph TD
+    subgraph Frontend [割り勘アプリ - JS/HTML/CSS]
+        A[ユーザー操作: メンバー設定] --> B{参加者名の入力/確定}
+        A --> C{品目と金額の入力}
+        A --> D{各品目の支払メンバー選択}
+        A --> E{メンバー追加/削除}
+        A --> F{品目削除}
+    end
+
+    subgraph Backend [Flask API (割り勘アプリ用: 想定される機能)]
+        G[参加者管理API]
+        H[品目管理API]
+        I[データ取得API]
+    end
+
+    subgraph Database [SQL Server (SSMS)]
+        J[Participants Table]
+        K[Products Table]
+        L[Product_Participants Table]
+    end
+
+    B -- POST: /api/participants --> G
+    C -- POST: /api/products --> H
+    D -- PUT: /api/products/{id}/checked --> H
+    E -- POST/DELETE: /api/participants/{id} --> G
+    F -- DELETE: /api/products/{id} --> H
+
+    G -- SQL Operations --> J
+    H -- SQL Operations --> K
+    H -- SQL Operations --> L
+    I -- SELECT Query --> J & K & L
+    I --> Frontend[アプリ起動時データロード]
