@@ -1,3 +1,4 @@
+# 🚨🚨🚨 注意: 以下のデータベース接続情報は、テスト目的のものです。
 from flask import Flask, render_template, jsonify, request
 import pyodbc
 
