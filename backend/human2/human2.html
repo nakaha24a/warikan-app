@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名前一覧</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='human2.css') }}">
+</head>
+<body>
+    <h2>食事メンバー一覧</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>名前</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for name in names %}
+                <tr>
+                    <td>{{ name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">ホームへ戻る</a>
+</body>
+</html>

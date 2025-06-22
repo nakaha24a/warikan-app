@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 20px;
+}
+
+/* テーブルのデザイン */
+table {
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}

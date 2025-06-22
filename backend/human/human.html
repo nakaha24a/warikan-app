@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食事メンバー入力フォーム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='human.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>食事メンバー入力フォーム</h2>
+        <label for="人数">人数を選択してください:</label>
+        <select id="人数" onchange="生成フォーム()">
+            <option value="2" selected>2人</option>
+            <option value="3">3人</option>
+            <option value="4">4人</option>
+            <option value="5">5人</option>
+            <option value="6">6人</option>
+        </select>
+        <div id="名前フォーム"></div>
+
+        <!-- 「次へ」ボタン（初期状態では非表示） -->
+        <div class="button-container">
+            <button id="次へ">次へ</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='human.js') }}" defer></script>
+</body>
+</html>

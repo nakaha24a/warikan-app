@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f8ff; /* 淡い青色の背景 */
+}
+
+/* コンテナのデザイン */
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* 白背景 */
+}
+
+/* タイトル */
+h2 {
+  text-align: center;
+  color: #0056b3; /* 濃い青 */
+}
+
+/* ラベルのデザイン */
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: bold;
+  color: #004080; /* 深めの青 */
+}
+
+/* 入力フィールドとセレクトボックス */
+input, select {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #007bff; /* 青色の枠線 */
+  border-radius: 5px;
+  background-color: #e6f2ff; /* 淡い青 */
+  font-size: 16px;
+}
+
+/* フォーカス時のスタイル */
+input:focus, select:focus {
+  outline: none;
+  border-color: #0056b3; /* 濃い青 */
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* ボタンのデザイン */
+.button-container {
+  text-align: center;
+}
+
+#次へ {
+  display: none; /* 初期状態では非表示 */
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* 明るい青 */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 86, 179, 0.3);
+}
+
+/* ボタンのホバー時 */
+#次へ:hover {
+  background-color: #0056b3; /* 濃い青 */
+}
